@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 header('Cache-Control: no-cache, must-revalidate'); 
 
 header('Content-Type: application/json; charset=utf-8');
@@ -10,17 +8,10 @@ sleep(1);
 
  
 function Verificar_exist(){
-  if (empty($_POST['login']) && empty($_POST['senha'])) {
+  if (empty($_POST['login']) || empty($_POST['senha'])) {
     $resposta = array('codigo' => '1', 'msg' => 'Credencias Incorretas.');
     echo json_encode($resposta);
-  }elseif(empty($_POST['login'])){
-    $resposta = array('codigo' => '1', 'msg' => 'Login Incorreto.');
-    echo json_encode($resposta);
-
-  }elseif(empty($_POST['senha'])){
-    $resposta = array('codigo' => '1', 'msg' => 'Senha Incorreta.');
-    echo json_encode($resposta);
-  } 
+  }
   if(isset($resposta)){
     return false;
   }else{
@@ -54,7 +45,7 @@ if( Verificar_exist() == true && Verificar_Http() == true){
   $resposta = array('codigo' => '3', 'msg' => 'Logado Com Sucesso.');
   echo json_encode($resposta);
   }else{
-    $resposta = array('codigo' => '1', 'msg' => 'Senha Incorreta.');
+    $resposta = array('codigo' => '1', 'msg' => 'Credenciais Incorretas.');
     echo json_encode($resposta);
   }
 }

@@ -19,9 +19,9 @@
       <img id="img-login" src="assets/img/263.jpg" alt="">
       <h2 id="welcome">Bem-vindo!</h2>
       <p id="uptext">Login:</p>
-      <input type="text" id="login" name="login" placeholder="Login">
+      <input type="text" id="login" name="login" placeholder="Login" required>
       <p id="uptext">Password:</p>
-      <input type="password" name="senha" id="senha" placeholder="Password">
+      <input type="password" name="senha" id="senha" placeholder="Password" required>
       <button id="submit">Login</button>
       <div id="mensagem">
       </div>

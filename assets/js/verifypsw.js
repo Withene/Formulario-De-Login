@@ -1,56 +1,87 @@
 $('document').ready(function () {
     $("#submit").click(function (e) {
-        e.preventDefault();
-
         scren = document.getElementById("mensagem")
+        load = document.getElementById("load");
+        submit = document.getElementById("submit");
+        mensagem = document.getElementById("mensagem")
 
-        var data = $('#form_um').serialize();
-        $.ajax({
-            type: 'POST',
-            url: './assets/loginphp/verifypsw.php',
-            data: data,
-            dataType: 'json',
-            beforeSend: function () {
-                document.getElementById("load").style.display = "block";
-                document.getElementById("submit").style.display = "none";
-                document.getElementById("mensagem").style.display = "none";
+        e.preventDefault();
+        if ($("#form_um")[0].checkValidity()) {
+            var data = $('#form_um').serialize();
+            $.ajax({
+                type: 'POST',
+                url: './assets/loginphp/verifypsw.php',
+                data: data,
+                dataType: 'json',
+                beforeSend: function () {
+                    //mostra o loading svg
 
-            },
-            success: function (response) {
+                    load.style.display = "block";
+                    //retira o botão
 
-                if (response.codigo == "1") {
+                    submit.style.display = "none";
 
-                    document.getElementById("submit").style.display = "block";
-                    document.getElementById("load").style.display = "none";
-                    document.getElementById("mensagem").style.display = "inline";
-                    x.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+                    // retira a mensagem se for a segunda tentativa.
+                    mensagem.style.display = "none";
+                },
+                success: function (response) {
+                    //primeiro caso de error
+                    if (response.codigo == "1") {
 
-                } else if (response.codigo == "2") {
 
-                    document.getElementById("load").style.display = "none";
-                    document.getElementById("submit").style.display = "none";
-                    document.getElementById("mensagem").style.display = "inline";
+                        //adiciona o botão de login novamente a tela
+                        submit.style.display = "block";
 
-                    scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+                        //retira o loading .svg
+                        load.style.display = "none";
 
-                } else if (response.codigo == "3") {
+                        //adiciona a mensgame a tela
+                        mensagem.style.display = "inline";
 
-                    document.getElementById("submit").style.display = "block";
-                    document.getElementById("load").style.display = "none";
-                    document.getElementById("mensagem").style.display = "inline";
-                    scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
-                    
+                        //exibe a mensagem de error 
+                        scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+
+                    } else if (response.codigo == "2") {
+                        //segundo caso de error
+
+                        load.style.display = "none";
+
+                        submit.style.display = "none";
+
+                        mensagem.style.display = "inline";
+
+                        scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+                    } else if (response.codigo == "3") {
+
+                        submit.style.display = "block";
+
+                        load.style.display = "none";
+
+                        mensagem.style.display = "inline";
+
+                        scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+
+                    }
+                },
+                error: function () {
+
+                    load.style.display = "none";
+
+                    submit.style.display = "block";
+
+                    alert("fui n");
                 }
-            },
-            error: function (response) {
+            });
+        } else {
+            mensagem.style.display = "inline";
 
-                document.getElementById("load").style.display = "none";
-                document.getElementById("submit").style.display = "block";
-                alert("fui n");
+            scren.innerHTML = '<h5 id="error">Preencha todos os campos do Fumulario!</h5>';
 
-            }
+        };
 
-        });
+
+
+
     });
 
 });
