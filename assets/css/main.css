@@ -1,0 +1,89 @@
+:root {
+    --color-grey: rgba(211, 211, 211, 0.5);
+    --color-black: rgb(0, 0, 0);
+}
+    
+body {
+    background-image: url("../img/fx.png");
+    background-size: 79%;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.Form-control {
+    background-color: rgb(235, 235, 235);
+    border-radius: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 460px;
+    padding: 0px 2px 1px 3px;
+    display: block;
+    margin: 220px auto;
+}
+
+input[type=text],
+input[type=password],
+input{
+    border-radius: 15px !important;
+    border: 1px solid #8405fb;
+    box-sizing: border-box;
+    margin: 5px auto;
+    text-indent: 5px;
+    outline: 0;
+
+}
+#img-login{
+    border-radius: 100%;
+    width: 140px;
+    margin: 15px 125px; 
+}
+
+#welcome{
+    color: #8405fb;
+    margin: 0;
+    text-align: center;
+}
+#login,#senha{
+    
+    display: block;
+    width: 250px;
+    height: 40px;
+}
+#submit {
+    display: block;
+    margin: 15px auto;
+    padding: 0.6rem;
+    width: 250px;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 1em;
+    border: 1px solid #8405fb;
+    background-color: #8405fb;
+    font-size: 1.2em;
+    color: white;
+   
+}
+#uptext{
+    margin: 10px 0px -5px 80px;
+    font-size: 1.1em;
+}
+#submit:hover{
+    background-color: #20023b;
+}
+svg path,
+svg rect{fill: #8405fb;}
+#load{
+   text-align: center;
+   margin: 30px 0px;
+   display: none;
+}
+#error{
+    text-align: center;
+    margin:2px 90px;
+    padding: 2px; 
+    color:red;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
