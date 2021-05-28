@@ -73,6 +73,7 @@ $('document').ready(function () {
                 }
             });
         } else {
+            
             mensagem.style.display = "inline";
 
             scren.innerHTML = '<h5 id="error">Preencha todos os campos do Fumulario!</h5>';
