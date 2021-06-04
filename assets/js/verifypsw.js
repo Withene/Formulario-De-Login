@@ -1,11 +1,9 @@
 $('document').ready(function () {
     $("#submit").click(function (e) {
-        scren = document.getElementById("mensagem")
-        load = document.getElementById("load");
-        submit = document.getElementById("submit");
-        mensagem = document.getElementById("mensagem")
-
-        e.preventDefault();
+     
+        
+       var ok = true;
+        e.preventDefault(ok);
         if ($("#form_um")[0].checkValidity()) {
             var data = $('#form_um').serialize();
             $.ajax({
@@ -25,7 +23,73 @@ $('document').ready(function () {
                     mensagem.style.display = "none";
                 },
                 success: function (response) {
-                    //primeiro caso de error
+                    scren = document.getElementById("mensagem");
+                   
+                    const stylesByCode = {
+                        1: {
+                        submitDisplay: "block",
+                        loadDisplay: "none",
+                        messageDisplay: "inline"
+                        },
+                        2: {
+                            submitDisplay: "none",
+                            loadDisplay: "none",
+                            messageDisplay: "inline"
+                        },
+                        3:{
+                            submitDisplay: "block",
+                            loadDisplay: "none",
+                            messageDisplay: "inline"
+                        }
+                    };
+                    const currentStyle = stylesByCode[response.codigo];
+                    document.getElementById("submit").style.display = currentStyle.submitDisplay;
+                    document.getElementById("load").style.display = currentStyle.loadDisplay;
+                    document.getElementById("mensagem").style.display = currentStyle.messageDisplay;
+                    scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
+                    ok=true;
+                    
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 /*    //primeiro caso de error
                     if (response.codigo == "1") {
 
 
@@ -61,7 +125,7 @@ $('document').ready(function () {
 
                         scren.innerHTML = '<h5 id="error">' + response.msg + '</h5>';
 
-                    }
+                    } */
                 },
                 error: function () {
 

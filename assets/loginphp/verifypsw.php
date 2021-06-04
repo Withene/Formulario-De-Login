@@ -3,7 +3,7 @@ header('Cache-Control: no-cache, must-revalidate');
 
 header('Content-Type: application/json; charset=utf-8');
 
-//apenas para demonstrar a classe login
+
 sleep(1);
 
 
