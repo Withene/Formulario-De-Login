@@ -3,9 +3,9 @@
  <br>
  
  
-
+<br>
  <a href="#objetivo">Objetivo</a> 
- <p> Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal. </p>
+ <p>Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal.</p>
  <a href="#tecnologias">Tecnologias</a> 
  <p> PHP, JQUERY,HTML,CSS </p>
  <a href="#autor">Autor</a>
