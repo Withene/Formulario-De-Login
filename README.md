@@ -4,7 +4,7 @@
  
  <p align="center">
  <a href="#objetivo">Objetivo</a> 
- •Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal.
+ • Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal.
  <a href="#tecnologias">Tecnologias</a> 
  • PHP, JQUERY,HTML,CSS
  <a href="#autor">Autor</a>
