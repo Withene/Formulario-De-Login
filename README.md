@@ -2,14 +2,14 @@
  Esse é um projeto em php sem framework utlizando  Jquery(ajax). 
  
  
- <p>
+ <bloquete>
  <a href="#objetivo">Objetivo</a> 
  <p> Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal. </p>
  <a href="#tecnologias">Tecnologias</a> 
  <p> PHP, JQUERY,HTML,CSS </p>
  <a href="#autor">Autor</a>
  <p> Withene.C</p>
-</p>
+</bloquete>
     <p>> Como usar Basta Apenas Abrir o Index.Php, logo depois inserir a senha, que estará logo abaixo.</p>
     <p>> login/Senha Lembre-se A Senha é um hash de 12345 e o login admin.</p>
 
