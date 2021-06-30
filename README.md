@@ -1,8 +1,9 @@
 <h1 align="center">Pagina de Login Feita em PHP e HTML5</h1>
  Esse é um projeto em php sem framework utlizando  Jquery(ajax). 
+ <br>
  
  
- <bloquete>
+
  <a href="#objetivo">Objetivo</a> 
  <p> Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal. </p>
  <a href="#tecnologias">Tecnologias</a> 
