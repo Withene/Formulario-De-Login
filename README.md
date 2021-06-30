@@ -10,8 +10,8 @@
  <a href="#autor">Autor</a>
  <p> Withene.C</p>
 </p>
-    <p>[Como usar] Basta Apenas Abrir o Index.Php, logo depois inserir a senha, que estará logo abaixo.</p>
-   <p> [Login/Senha] Lembre-se A Senha é um hash de 12345 e o login admin.</p>
+    <p>> Como usar Basta Apenas Abrir o Index.Php, logo depois inserir a senha, que estará logo abaixo.</p>
+    <p>> login/Senha Lembre-se A Senha é um hash de 12345 e o login admin.</p>
 
 
 ### Features
