@@ -9,9 +9,9 @@
  <p> PHP, JQUERY,HTML,CSS </p>
  <a href="#autor">Autor</a>
  <p> Withene.C</p>
-</bloquete>
+
      **Como usar** <p>Basta Apenas Abrir o Index.Php, logo depois inserir a senha, que estará logo abaixo.</p>
-    <p> **login/Senha** Lembre-se A Senha é um hash de 12345 e o login admin.</p>
+     **login/Senha** <p>Lembre-se A Senha é um hash de 12345 e o login admin.</p>
 
 
 ### Features
