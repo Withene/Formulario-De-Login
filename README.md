@@ -2,7 +2,7 @@
  Esse é um projeto em php sem framework utlizando  Jquery(ajax). 
  
  
- <p align="center">
+ <p>
  <a href="#objetivo">Objetivo</a> 
  <p> Testar Meus conhecimentos em PHP e Ajax, um mini desafio pessoal. </p>
  <a href="#tecnologias">Tecnologias</a> 
